@@ -1,0 +1,3 @@
+membuat target MSE dan epoch
+menentukan jumlah iterasi
+mengganti data excel UTS menjadi data yang lebih kompleks
