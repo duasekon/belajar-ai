@@ -6,3 +6,31 @@ masukan (p) yang kemudian dimodelkan akan menghasilkan prediksi (a)
 hasil prediksi yang dibandingkan dengan target (t) akan menghasilkan selisih antara target dengan prediksi atau disebut sebagai error
 setiap masukan dan target memiliki error sehingga sejumlah (n) masukan dan target memberikan n error yang kemudian disebut sebagai MSE (mean squared error)
 semakin kecil nilai MSE, maka model dianggap semakin baik, namun dengan syarat data masukan yang diberikan adalah benar
+apabila data masukan jelek (mengandung noise), namun MSE bernilai mendekati nol, maka hasil yang didapatkan tidak baik atau terjadi overfitting, dapat disebut juga sebagai less general
+
+algoritma optimasi diberikan untuk mengolah MSE pada data AI agar menghasilkan nilai w dan b terbaik
+nilai w dan b terbaik yang didapatkan kemudian akan diolah kembali ke dalam model sampai didapatkan nilai MSE mendekati nol dengan data masukan yang sudah benar
+
+dalam membuat algoritma optimasi, terdapat beberapa cara yang bisa dilakukan, antara lain:
+-GD (gradient descent), https://medium.com/mlearning-ai/machine-learning-optimization-algorithms-1-gradient-descent-258dfb5987e1
+-SGD (stochastic gradient descent), https://medium.com/mlearning-ai/machine-learning-optimization-algorithms-1-gradient-descent-258dfb5987e1
+-MBGD (mini-batch gradient descent), https://medium.com/mlearning-ai/machine-learning-optimization-algorithms-1-gradient-descent-258dfb5987e1
+-GA (genetics algorithm), https://socs.binus.ac.id/2020/07/29/optimasi-dengan-genetic-algorithm-menggunakan-python/
+-PSO (particle swarm optimization), https://medium.com/analytics-vidhya/implementing-particle-swarm-optimization-pso-algorithm-in-python-9efc2eb179a6 dan https://analyticsindiamag.com/a-tutorial-on-particle-swarm-optimization-in-python/
+-SA,
+-Algae algorithm,
+-dll
+
+gradient descent (GD) merupakan salah satu teknik optimasi yang sering digunakan
+penerapan GD menggunakan prinsip gradien (kemiringan garis)
+dengan menentukan initial weight (bobot awal) w, kemudian mencari w optimum, maka akan didapatkan w terbaik dari hasil perhitungan
+
+langkah-langkah menentukan w terbaik antara lain sebagai berikut:
+-tentukan initial weight w(1) --> k=1
+-didapatkan hasil a(k) = w(k).p(k)
+-didapatkan nilai e(k) = t(k) - a(k)
+-didapatkan nilai MSE(k) = F(k)
+-didapatkan delta w(k) = - gamma.'F(k)/'w(k)
+-didapatkan w(k+1) = w(k) + delta w(k)
+-maka nilai w(k) yang lama akan diganti dengan w(k+1) yang terus bertambah dengan iterasi
+-langkah diulang sehingga didapatkan prediksi terbaru a(k) hingga mencapai nilai MSE yang diinginkan.
