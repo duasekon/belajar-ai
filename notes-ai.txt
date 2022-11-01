@@ -34,3 +34,17 @@ langkah-langkah menentukan w terbaik antara lain sebagai berikut:
 -didapatkan w(k+1) = w(k) + delta w(k)
 -maka nilai w(k) yang lama akan diganti dengan w(k+1) yang terus bertambah dengan iterasi
 -langkah diulang sehingga didapatkan prediksi terbaru a(k) hingga mencapai nilai MSE yang diinginkan.
+
+gamma dalam persamaan di atas adalah learning rate
+nilai ini didapatkan berdasarkan percobaan sehingga mendapatkan hasil yang sesuai
+nilai gamma yang terlalu kecil atau pun terlalu besar akan memberikan hasil yang tidak sesuai sasaran
+oleh karena itu, diperlukan beberapa kali training untuk mendapatkan hasil terbaik sesuai yang diinginkan
+
+gradient descent (GD) memiliki keuntungan karena dapat menentukan secara analitik dan ada eksaknya
+namun, GD hanya fokus pada lokal optimal walaupun ada hasil w yang lebih optimum (global minimum)
+solver{‘lbfgs’, ‘sgd’, ‘adam’}, default=’adam’
+
+referensi lain:
+-https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html
+-https://scikit-learn.org/stable/modules/sgd.html
+-https://github.com/nicknochnack/GradientDescent
