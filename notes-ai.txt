@@ -1,0 +1,3 @@
+Dalam mempelajari kecerdasan buatan, perlu diketahui terkait:
+-model, dan
+-teknik optimasi
