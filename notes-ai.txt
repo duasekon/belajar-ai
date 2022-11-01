@@ -1,3 +1,8 @@
 Dalam mempelajari kecerdasan buatan, perlu diketahui terkait:
 -model, dan
 -teknik optimasi
+
+masukan (p) yang kemudian dimodelkan akan menghasilkan prediksi (a)
+hasil prediksi yang dibandingkan dengan target (t) akan menghasilkan selisih antara target dengan prediksi atau disebut sebagai error
+setiap masukan dan target memiliki error sehingga sejumlah (n) masukan dan target memberikan n error yang kemudian disebut sebagai MSE (mean squared error)
+semakin kecil nilai MSE, maka model dianggap semakin baik, namun dengan syarat data masukan yang diberikan adalah benar
